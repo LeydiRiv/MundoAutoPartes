@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tittle y meta name -->
+    <title>Marcha</title>
+    <meta name="Auto Partes Electricas Automotriz Huetamo de MundoAutopartes">
+    <!-- <link rel="stylesheet" href="Assets/style.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> Vincula el archivo CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- El nav. Inicio -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MundoAutopartes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/mostrar-alternador">Alternador</a></li>
+							<li><a class="dropdown-item" href="/arnes">Arnés</a></li>
+							<li><a class="dropdown-item" href="/mostrar-full-injection">Full Injection</a></li>
+							<li><a class="dropdown-item" href="/mostrar-iluminacion">Iluminación</a></li>
+							<li><a class="dropdown-item" href="marchas.ejs">Marchas</a></li>
+							<li><a class="dropdown-item" href="quimicos.ejs">Químicos</a></li>
+							<li><a class="dropdown-item" href="/terminal">Terminal</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input id="buscador" class="form-control me-2" type="search" placeholder="Buscar"
+                        aria-label="Search">
+
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- El nav. Fin -->
+
+    <!-- Descripción. Inicio -->
+    <br>
+
+    <main>
+        <div class="container-img">
+            <img src="img/Marchas/3. marcha.png" alt="imagen-producto">
+        </div>
+
+        <div class="container-info-product">
+            <div class="container-title">
+                <h1>Marcha delco serie pg260m 12 volts 11 dientes chevrolet astro avalanche blazer ( 10465578 )
+                </h1>
+            </div>
+
+            <div class="container-details">
+                  <p class="price">PRECIO: <span class="precio">$2,100.00</span></p>
+                  <p class="code">NPC: <span class="npc">39106</span></p>
+            </div>
+            <!-- Boton del carrito -->
+            <div class="container-add-cart">
+                <div class="container-quantity">
+                    <input type="number" id="quantity" placeholder="1" value="1" min="1"
+                        style="width: 50px; text-align: center;" />
+                </div>
+                <button onclick="addToCart()">Añadir al carrito</button>
+            </div>
+
+            <script>
+                function addToCart() {
+                    var quantityInput = document.getElementById("quantity");
+                    var quantity = parseInt(quantityInput.value);
+                    // Aquí puedes agregar la lógica para agregar el producto al carrito
+                    // Puedes usar la cantidad ingresada en quantity para determinar cuántos productos agregar
+                    // Por ejemplo, puedes llamar a una función addToCart(quantity) y pasar la cantidad como argumento
+                    // Esta función puede realizar las acciones necesarias para agregar el producto al carrito
+                }
+            </script>
+        </div>
+
+        <div class="container-description">
+            <div class="title-description">
+                <p>
+                <h4>Especificaciones Técnicas</h4>
+                </p>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="text-description">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <!-- Primera Fila -->
+                            <th>OEM</th>
+                            <th>SISTEMA OEM
+                            </th>
+                            <th>NUMERO DE DIENTES
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- 1 FILA - DICTADO -->
+                            <td>10465578
+                            </td>
+                            <td>DELCO
+                            </td>
+                            <td>
+                                11
+                            </td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+                </p>
+            </div>
+        </div>
+
+    </main>
+    <!-- Productos Relacionados. Inicio -->
+    <section class="container-related-products">
+        <h2>Productos Relacionados</h2>
+        <div class="card-list-products">
+
+            <!-- IMAGEN 1 - ALTERNADOR -->
+            <div class="card">
+                <a href="/marcha-informacion1">
+                    <div class="card-img">
+                        <img src="img/Marchas/1. marcha.png" alt="producto-1">
+                    </div>
+                    <div class="info-card">
+                        <div class="text-product">
+                            <h3> Marcha mitsubishi
+                                <br> 9 dientes nissan urvan
+                            </h3>
+                        </div>
+                        <div class="price">$2,200.00</div>
+                        <!-- <div class="codigo">NPC: 41762</div> -->
+                    </div>
+                </a>
+            </div>
+
+            <script>
+
+            </script>
+            <!-- IMAGEN 2 - ALTERNADOR -->
+            <div class="card">
+                <a href="/marcha-informacion2">
+                    <div class="card-img">
+                        <img src="img/Marchas/2. marcha.png" alt="producto-2">
+                    </div>
+                    <div class="info-card">
+                        <div class="text-product">
+                            <h3>Marcha mitsubishi
+                                <br>13 dientes nissan frontier
+                            </h3>
+                        </div>
+                        <div class="price">$2,650.00</div>
+                    </div>
+                </a>
+            </div>
+            <!-- IMAGEN 3 - ALTERNADOR -->
+            <div class="card">
+                <a href="/marcha-informacion3">
+                    <div class="card-img">
+                        <img src="img/Marchas/3. marcha.png" alt="producto-3">
+                    </div>
+                    <div class="info-card">
+                        <div class="text-product">
+                            <h3>Marcha delco
+                                <br> 11 dientes chevrolet
+                            </h3>
+                        </div>
+                        <div class="price">$2,100.00</div>
+                    </div>
+                </a>
+            </div>
+            <!-- IMAGEN 4 - ALTERNADOR -->
+            <div class="card">
+                <a href="/marcha-informacion4">
+                    <div class="card-img">
+                        <img src="img/Marchas/4. marcha.png" alt="producto-4">
+                    </div>
+                    <div class="info-card">
+                        <div class="text-product">
+                            <h3>Marcha hitachi
+                                <br>8 dientes nissan
+                            </h3>
+                        </div>
+                        <div class="price">$2,200.00</div>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Productos Relacionados. Fin -->
+
+    <!-- texto no esisten resultados cuando filtra la busqueda -->
+    <div id="noResultsMessage" style="display: none;">
+        <h1>No existen resultados.</h1>
+    </div>
+
+    <footer class="pie">
+        <div class="text-center bg-light">
+            <h4>Derechos reservados</h4>
+            <p>(c) Son mis derechos</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="/si.js"></script>
+
+</body>
+
+</html>

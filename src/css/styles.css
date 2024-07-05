@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+/* contiene las imagenes centradas y bonis */
+body {
+	font-family: 'Ubuntu';
+	max-width: 1200px;
+	margin: 0 auto;
+}
+/* Da espacio de imagen entre imagen */
+img {
+	max-width: 100%;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	padding: 30px;
+	justify-content: center;
+}
+
+.container-related-products h2 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.card-list-products {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 25px;
+}
+/* Agrega este estilo para eliminar los bordes en las imágenes */
+.card-img img {
+    border: none;
+}
+
+.card {
+	cursor: pointer;
+}
+
+.card-img {
+	background: transparent;
+	margin-bottom: 15px;
+}
+
+/* .card-img img {   HACIA QUE LAS IMAGENES SE HAGAN GRANDES Y CREO CENTRADAS.
+	height: 400px;
+	object-fit: cover;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+} */
+
+.info-card {
+	display: flex;
+	justify-content: space-between;
+}
+
+.text-product {
+	color: #252525;
+	font-weight: 300;
+	line-height: 1.4;
+}
+
+.text-product h3 {
+	color: inherit;
+	font-weight: inherit;
+	font-size: 15px;
+}
+/* ... (código CSS existente) ... */
+
+/* Estilos para el contenedor de precio y tabla minimalista */
+.container-price-table {
+    background-color: #f7f7f9;
+    flex: 1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Agregar scroll si es necesario */
+    display: flex;
+    flex-direction: column; /* Apila el precio y la tabla verticalmente */
+    align-items: flex-start; /* Alinea el precio a la izquierda */
+    text-align: center; /* Alinea el texto del precio al centro */
+}
+
+.price-text {
+    /* margin-bottom: 20px; Espacio entre el precio y el texto */
+    font-weight: 300; /* Letra fina */
+}
+
+.product-code {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    font-weight: 100; /* Menos grosor */
+}
+
+.minimal-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+    margin-top: 20px; /* Espacio entre el precio y la tabla */
+}
+
+.minimal-table th,
+.minimal-table td {
+    border: 1px solid #e4e4e4;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.minimal-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.minimal-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.minimal-table tr:hover {
+    background-color: #ddd;
+}
+
+/* ... (código CSS existente) ... */
+
+footer {
+	padding: 30px;
+	background-color: #eee;
+	margin-top: 50px;
+	color: #222;
+}

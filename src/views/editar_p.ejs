@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+<head>
+  <title>Editar Perfil de Usuario</title>
+  <style>
+    
+    input[type="text"] {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px; /* Redondear los bordes */
+      width: 100%; /* Ajustar el ancho al contenedor */
+      box-sizing: border-box; /* Incluir padding y border en el ancho */
+      margin-bottom: 10px; /* Añadir espacio entre los inputs */
+    }
+        /* Estilos de tipografía */
+    h1 {
+      font-family: 'Arial', sans-serif; /* Cambia la fuente para títulos */
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    h2 {
+      font-family: 'Verdana', sans-serif; /* Cambia la fuente para subtítulos */
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      color: #444444;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif; /* Cambia la fuente para el cuerpo */
+      font-size: 16px;
+      color: #666666;
+      background-color: #f8f8f8; /* Cambia el color de fondo */
+    }
+
+    /* Estilos para la tabla */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .box {
+      margin: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+
+    .buto {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    button {
+      cursor: pointer;
+      border-radius: 100px;
+      text-align: center;
+    }
+    
+    button.regresar {
+      background-color: #ea1717; /* Color rojo */
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+    button.guardarCa {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+    header {
+      background-color: #4f4f4f; /* Color de fondo del header */
+      padding: 20px;
+      
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Contenido -->
+  <header>
+    <h1>Editar Perfil de Usuario</h1>
+  </header>
+  <br>
+  
+  <!-- En la sección de editar información personal -->
+  <div class="box">
+    <h2>Datos Personales Del Usuario</h2>
+    <form action="/guardarCambiosPerfil" method="POST">
+
+      <table>
+        <tr>
+          <th>Clave:</th>
+          <td><input type="text" name="clave" value="<%= usuario.clave %>" required></td>
+        </tr>
+
+
+
+       <% if (datosPersonales) { %>
+      
+        <tr>
+          <th>Nombre:</th>
+          <td><input type="text" name="nombre" value="<%= datosPersonales.nombre %>" required></td>
+        </tr>
+        <tr>
+          <th>Apellido Paterno:</th>
+          <td><input type="text" name="apellidop" value="<%= datosPersonales.apellidop %>" required></td>
+        </tr>
+        <tr>
+          <th>Apellido Materno:</th>
+          <td><input type="text" name="apellidom" value="<%= datosPersonales.apellidom %>" required></td>
+        </tr>
+        <tr>
+          <th>Dirección:</th>
+          <td><input type="text" name="direccion" value="<%= datosPersonales.direccion %>" required></td>
+        </tr>
+        <tr>
+          <th>Ciudad:</th>
+          <td><input type="text" name="ciudad" value="<%= datosPersonales.ciudad %>" required></td>
+        </tr>
+        <tr>
+          <th>Estado:</th>
+          <td><input type="text" name="estado" value="<%= datosPersonales.estado %>" required></td>
+        </tr>
+        <tr>
+          <th>Código Postal:</th>
+          <td><input type="text" name="codigoP" value="<%= datosPersonales.codigoP %>" required></td>
+        </tr>
+        <tr>
+          <th>Teléfono:</th>
+          <td><input type="text" name="telefono" value="<%= datosPersonales.telefono %>" required></td>
+        </tr>
+      </table>
+      <% } else { %>
+        <p>No se encontraron datos personales para este usuario.</p>
+      <% } %>
+      <div class="buto">
+     
+
+
+
+
+
+ <!-- Botón de enviar -->
+ <div class="form-section">
+  <button type="submit" class="guardarCa" onclick="mostrarAlerta()">Guardar cambios</button>
+</div>
+</form>
+
+<script>
+function mostrarAlerta() {
+  alert("El registro fue exitoso");
+}
+</script>
+
+
+
+
+        <button class="regresar" onclick="history.back()">Regresar</button>
+      </div>
+
+
+    </form>
+  </div>
+</body>
+
+<!-- En tu vista editar_P.ejs -->
+<!-- ... -->
+
+<script>
+  // Script para mostrar un mensaje emergente después de la actualización del perfil
+  window.onload = function() {
+    // Verificar si existe algún mensaje de éxito en la URL (podría ser una bandera en la URL)
+    const urlParams = new URLSearchParams(window.location.search);
+    const successMessage = urlParams.get('success');
+
+    if (successMessage) {
+      alert(successMessage); // Muestra el mensaje emergente
+    }
+  };
+</script>
+
+<!-- ... -->
+
+</html>
+<%- include ('partials/_footer') %>

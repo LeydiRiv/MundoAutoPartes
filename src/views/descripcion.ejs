@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Descripción</title>
+	<link rel="stylesheet" href="css/styles.css" />
+	<script>
+		var productos = [
+	{nombre: "Marcha bosch 12 volts", imagen:"img/Marchas/1. Marcha bosch 12 volts 9 dientes case ford new holland ( 0001230007 ).png", precio: 85.00}
+		];
+	</script>
+</head>
+
+<body>
+	<header>
+		<h1>MundoAutopartes</h1>
+	</header>
+
+	<section class="container-related-products">
+		<h2>Elementos principales</h2>
+		<div class="card-list-products" id="productosContainer">
+		  <!-- Aquí se generarán dinámicamente los productos -->
+		</div>
+	  </section>
+	  
+
+	  <script>
+		// Función para generar los elementos HTML de los productos
+		function generarProductos() {
+		  // Obtener el contenedor donde se colocarán los productos
+		  var container = document.getElementById("productosContainer");
+	  
+		  // Iterar sobre la lista de productos (se asume que existe una variable 'productos' definida previamente)
+		  productos.forEach(function(producto) {
+			// Crear un elemento de tarjeta (card)
+			var card = document.createElement("div");
+			card.className = "card";
+	  
+			// Crear un enlace para el producto que lleva a "descripcion.ejs"
+			var enlace = document.createElement("a");
+			// enlace.href = "descripcion.ejs";
+	  
+			// Crear un contenedor para la imagen del producto
+			var img = document.createElement("div");
+			img.className = "card-img";
+			img.innerHTML = '<img src="' + producto.imagen + '" alt="' + producto.nombre + '">';
+	  
+			// Crear un contenedor para la información del producto
+			var infoCard = document.createElement("div");
+			infoCard.className = "info-card";
+	  
+			// Crear un contenedor para el nombre del producto
+			var textProduct = document.createElement("div");
+			textProduct.className = "text-product";
+			textProduct.innerHTML = '<h3>' + producto.nombre + '</h3>';
+
+			// Crear un contenedor para el precio del producto
+			var price = document.createElement("div");
+			price.className = "price";
+			price.innerHTML = '$' + producto.precio.toFixed(2);
+	  
+			// Agregar el nombre y el precio al contenedor de información del producto
+			infoCard.appendChild(textProduct);
+			infoCard.appendChild(price);
+	  
+			// Agregar la imagen y la información del producto al enlace
+			enlace.appendChild(img);
+			enlace.appendChild(infoCard);
+	  
+			// Agregar el enlace al elemento de tarjeta
+			card.appendChild(enlace);
+	  
+			// Agregar la tarjeta al contenedor de productos
+			container.appendChild(card);
+		  });
+		}
+	  
+		// Llamar a la función para generar los productos al cargar la página
+		window.onload = generarProductos;
+	  </script>
+	  
+	  
+
+
+
+
+
+
+	
+	<!-- <div class="container-title">Marcha</div>
+
+	<main> -->
+		<!-- Una imagen del producto -->
+		<!-- <div class="container-img">
+			<img src="Img/Marchas/1. Marcha bosch 12 volts 9 dientes case ford new holland ( 0001230007 ).png"
+				alt="imagen-producto" />
+		</div> -->
+		<!-- Nombre de la pieza/producto -->
+		<!-- <div class="container-info-product">
+			<div class="container-price">
+				<span>Marcha bosch 12 volts 9 dientes case ford new holland</span>
+				<i class="fa-solid fa-angle-right"></i>
+			</div> -->
+			<!-- Precio de la pieza/producto -->
+			<!-- <h4 style="font-size: 24px;">$4,588</h4> -->
+
+			<!-- Tabla de codigos -->
+			<!-- <div class="container-price-table">
+				<div class="price-text">
+					<h4 style="font-size: 24px; margin-bottom: 20px;">$4,588</h4>
+					<p class="product-code">NPC 48557C</p>
+				</div>
+				<table class="minimal-table">
+					<tr>
+						<th>VOLTS</th>
+						<th>NÚMERO DE DIENTES</th>
+						<th>SISTEMA OEM</th>
+					</tr>
+					<tr>
+						<td>12V</td>
+						<td>9</td>
+						<td>BOSCH</td>
+					</tr>
+					<tr>
+						<td>SERIE</td>
+						<td>OEM</td>
+						<td>OEM</td>
+					</tr>
+					<tr>
+						<td>PLGR</td>
+						<td>0001230007</td>
+						<td>SR9979X</td>
+					</tr>
+				</table>
+
+
+
+
+			</div>
+	</main> -->
+
+	<footer>
+		<div class="text-center bg-light">
+			<h4>Derechos reservados</h4>
+			<p>(c) Son mis derechos</p>
+		</div>
+	</footer>
+
+	<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+
+</body>
+
+</html>

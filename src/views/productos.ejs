@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ristro productos</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="query.js"> -->
+    <!-- <script src="query.js"></script> -->
+</head>
+<style>
+   header {
+        background-color: #007eb9;
+        padding: 20px;
+        text-align: center;
+        position: fixed; /* Fija el header en la parte superior */
+        width: 100%; /* Ajusta el ancho al 100% */
+        top: 0; /* Posiciona el header en la parte superior */
+        z-index: 1000; /* Z-index alto para estar sobre otros elementos */
+    }
+</style>
+<body>
+    <header>
+        <h1>Registro de productos</h1>
+      </header>
+      <br>
+
+<br><br>
+    <div class="container">
+        <!-- Barra lateral -->
+        <div class="sidebar">
+            <ul>
+                <!-- <li><a href="productos.ejs">Registro de productos</a></li> -->
+                <li><a href="proveedores.ejs">Registro de proveedores</a></li>
+       
+            </ul>
+        </div>
+
+        <form action="rprod" method="post">
+
+            <h1 class="form-title">Registro de productos</h1>
+
+            <!-- Sección 1: Nombre, Modelo, Precio -->
+            <div class="form-section form-section-horizontal">
+                <label>Nombre:</label>
+                <input type="text" name="nombre" required autofocus>
+
+                <label>Modelo:</label>
+                <input type="text" name="modelo" required autofocus>
+
+                <label>Precio:</label>
+                <input type="number" name="precio" step="0.01" required autofocus>
+            </div>
+
+            <!-- Sección 2: Categoría, Proveedor, Stock -->
+            <div class="form-section form-section-horizontal">
+                <label>Categoría:</label>
+                <input type="text" name="categoria" required autofocus>
+
+                <label>Proveedor:</label>
+                <input type="text" name="idProveedor" required autofocus>
+
+                <label>Stock:</label>
+                <input type="number" name="stock" required autofocus>
+            </div>
+
+            <!-- Sección 3: Descripción -->
+            <div class="form-section">
+                <label>Descripción:</label>
+                <textarea name="descripcion" rows="4" style="resize: none;" required autofocus></textarea>
+            </div>
+
+            <!-- Sección 4: Imagen -->
+            <div class="form-section form-section-horizontal">
+                <label>Imagen:</label>
+                <input type="file" name="imagen" accept="image/*" required autofocus>
+            </div>
+
+            <!-- Botón de enviar -->
+            <div class="form-section">
+                <button type="submit" onclick="mostrarAlerta()">Agregar</button>
+            </div>
+        </form>
+
+        <script>
+            function mostrarAlerta() {
+                alert("El registro fue exitoso");
+            }
+        </script>
+    </div>
+
+</body>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</html>

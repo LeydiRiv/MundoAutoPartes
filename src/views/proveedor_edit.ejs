@@ -1,0 +1,56 @@
+<%- include ('partials/_header') %>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h3 class="mb-4">Editar datos</h3>
+            <div class="card">
+                <div class="card-body">
+                    <form action="actualizarA/<%=data.id%>" method="post">
+                        <div class="form-group">
+                            <label for="nomEmpresa">Nombre de la Empresa:</label>
+                            <input type="text" name="nomEmpresa" value="<%=data.nomEmpresa%>" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Dirección:</label>
+                            <input type="text" name="direccion" value="<%=data.direccion%>" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad:</label>
+                            <input type="text" name="ciudad" value="<%=data.ciudad%>" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado:</label>
+                            <input type="text" name="estado" value="<%=data.estado%>" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="codigoP">Código Postal:</label>
+                            <input type="text" name="codigoP" value="<%=data.codigoP%>" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correoElec">Correo Electrónico:</label>
+                            <input type="text" name="correoElec" value="<%=data.correoElec%>" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="text" name="telefono" value="<%=data.telefono%>" class="form-control" required>
+                        </div>
+                        <div class="form-group text-center">
+                            <!-- <button type="submit" class="btn btn-primary btn-block">Actualizar</button> -->
+                            <div class="form-section">
+                                <button type="submit" class="btn btn-primary" onclick="mostrarAlerta()">Agregar</button>
+                            </div>
+                        </form>
+                
+                        <script>
+                            function mostrarAlerta() {
+                                alert("La actualización fue exitosa");
+                            }
+                        </script>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include ('partials/_footer') %>

@@ -1,0 +1,29 @@
+{
+  "name": "MundoAutoPartes",
+  "version": "1.0.0",
+  "description": "Proyecto del semestre",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "autopartes",
+    "autos",
+    "aplicacion",
+    "tienda de autopartes",
+    "tienda online"
+  ],
+  "author": "Denia, Leydi, Sergio",
+  "license": "ISIC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-myconnection": "^1.0.4",
+    "express-session": "^1.17.3",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

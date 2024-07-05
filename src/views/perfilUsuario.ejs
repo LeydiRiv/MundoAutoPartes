@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+<head>
+  <!-- Encabezado y estilos -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif; /* Cambia la fuente para el cuerpo */
+      font-size: 16px;
+      color: #666666;
+      background-color: #f8f8f8; /* Cambia el color de fondo */
+      margin: 0;
+      padding: 20px;
+      text-align: center; /* Para centrar el texto */
+    }
+
+    h1 {
+      font-family: 'Arial', sans-serif; /* Cambia la fuente para títulos */
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    h2 {
+      font-family: 'Verdana', sans-serif; /* Cambia la fuente para subtítulos */
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      color: #444444;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+      border: 1px solid #dddddd;
+    }
+
+    th, td {
+      border: 1px solid #949494;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f8f4f4;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8f4f4;
+    }
+/* recuadro afuera de la tablas*/
+    .box {
+      background-color: #d8d7d7;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    .buto {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    button {
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    button.modificar {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+    }
+
+
+    button.regresar {
+      background-color: #ea1717; /* Color rojo */
+      color: #ffffff;
+      border: none;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    p {
+      margin-bottom: 8px;
+    }
+
+    .centered {
+      text-align: center; /* Para centrar el texto dentro del div */
+    }
+    header {
+      background-color: #4f4f4f; /* Color de fondo del header */
+      padding: 20px;
+      
+      text-align: center;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Perfil de Usuario</h1>
+  </header>
+  <br>
+  <!-- En la sección de mostrar información personal -->
+  <div class="box">
+    <h2>Información Personal</h2>
+    <table>
+      <tr>
+        <th>id:</th>
+        <td><%= usuario.id %></td>
+      </tr>
+      <tr>
+        <th>Correo:</th>
+        <td><%= usuario.correo %></td>
+      </tr>
+      <tr>
+        <th>Clave:</th>
+        <td><%= usuario.clave %></td>
+      </tr>
+    </table>
+
+    <!-- Datos personales -->
+    <% if (datosPersonales) { %>
+      <h2>Datos Personales</h2>
+      <table>
+        <tr>
+          <th>Nombre:</th>
+          <td><%= datosPersonales.nombre %></td>
+        </tr>
+        <tr>
+          <th>Apellido Paterno:</th>
+          <td><%= datosPersonales.apellidop %></td>
+        </tr>
+        <tr>
+          <th>Apellido Materno:</th>
+          <td><%= datosPersonales.apellidom %></td>
+        </tr>
+        <tr>
+          <th>Dirección:</th>
+          <td><%= datosPersonales.direccion %></td>
+        </tr>
+        <tr>
+          <th>Ciudad:</th>
+          <td><%= datosPersonales.ciudad %></td>
+        </tr>
+        <tr>
+          <th>Estado:</th>
+          <td><%= datosPersonales.estado %></td>
+        </tr>
+        <tr>
+          <th>Código Postal:</th>
+          <td><%= datosPersonales.codigoP %></td>
+        </tr>
+        <tr>
+          <th>Teléfono:</th>
+          <td><%= datosPersonales.telefono %></td>
+        </tr>
+      </table>
+    <% } else { %>
+      <p>No se encontraron datos personales para este usuario.</p>
+    <% } %>
+  </div>
+
+  <!-- Botones -->
+  <div class="buto">
+    <button class="modificar" onclick="location.href='/editar_p.ejs'" >Modificar</button>
+    <button class="regresar" onclick="location.href='/sesion'">Regresar</button>
+  </div>
+</body>
+</html>
+<%- include ('partials/_footer') %>

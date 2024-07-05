@@ -1,0 +1,125 @@
+<%- include ('partials/_header') %>
+    <!-- Vamos a incluir la tabla -->
+    <!-- Ver objeto -->
+    <pre><%=data[0].id%></pre>
+    <div class="container">
+        <div class="row mt-5">
+            <!-- Colocamos la tabla -->
+
+            <div class="col-md-7" id="mover">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Nombre</th>
+                            <th>Apellido paterno</th>
+                            <th>Apellido materno</th>
+                            <th>Dirección</th>
+                            <th>Ciudad</th>
+                            <th>Estado</th>
+                            <th>Código postal</th>
+                            <th>Correo electrónico</th>
+                            <th>telefono</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%if(data){%>
+                            <%for (var i=0; i< data.length;i++) { %>
+                                <tr>
+                                    <td>
+                                        <%=(i+1)%>
+                                    </td>
+                                    <td>
+                                        <%=data[i].nombre%>
+                                    </td>
+                                    <td>
+                                        <%=data[i].apellidop%>
+                                    </td>
+                                    <td>
+                                        <%=data[i].apellidom%>
+                                    </td>
+                                    <td>
+                                        <%=data[i].direccion%>
+                                    </td>
+                                    <td>
+                                        <%=data[i].ciudad%>
+                                    </td>
+                                    <td>
+                                        <%=data[i].estado%>
+                                    </td>
+                                    <td>
+                                        <%=data[i].codigoP%>
+                                    </td>
+                                    <td>
+                                        <%=data[i].correoElec%>
+                                    </td>
+                                    <td>
+                                        <%=data[i].telefono%>
+                                    </td>
+                                    <!-- <td>
+                                         <% data.forEach(function(cliente) { %>
+                                        <a href="deleteE/<%=data[i].id%>" class="btn btn-danger" br>E</a> -->
+                                        <!-- <a href="consultarE/<%=data[i].id%>" class="btn btn-danger">M</a> -->
+                                    <!-- </td> -->
+                                </tr>
+                                <%}%>
+                                    <%}%>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- <div class="col-md-5">
+                <h3>Datos del cliente</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <form action="agregar" method="post">
+                            <div class="form-group">
+                                <p>Nombre:</p>
+                                <input type="text" name="nombre" placeholder="AutoZone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <p>Apellido paterno:</p>
+                                <input type="text" name="apellidop" placeholder="Avenida Madero" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <p>Apellido materno:</p>
+                                <input type="text" name="apellidom" placeholder="CDMX" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <p>Dirección:</p>
+                                <input type="text" name="direccion" placeholder="CDMX" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <p>Ciudad:</p>
+                                <input type="text" name="ciudad" placeholder="84615" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <p>Estado:</p>
+                                <input type="text" name="estado" placeholder="autozone.calidad@gmail.com"
+                                    class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <p>Código postal:</p>
+                                <input type="text" name="codigoP" placeholder="4351157650" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <p>Correo electrónico:</p>
+                                <input type="text" name="correoElec" placeholder="4351157650" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <p>Telefono:</p>
+                                <input type="text" name="telefono" placeholder="4351157650" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Agregar</button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div> -->
+        </div>
+
+        </form>
+    </div>
+
+    <%- include ('partials/_footer') %>

@@ -1,0 +1,149 @@
+/* Agregado para mejorar el diseño */
+body {
+    font-family: Arial, sans-serif;
+    margin: 5%;
+    /* padding: 5%; */
+    background: linear-gradient(to right, #a8d8ea, #d8dede);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    /* Agregado el efecto de desenfoque*/
+}
+
+.form-title {
+    text-align: center;
+    color: #3459E6;
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+
+form {
+    width: 45%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fondo semi-transparente */
+    padding: 20px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*Separación entre la sección de desc e imagen*/
+.form-section {
+    margin-bottom: 15px;
+}
+
+.form-section input,
+.form-section select {
+    width: 10%;
+    padding: 5px; /*Tamaño de los imputs*/
+    margin-bottom: 10px;
+}
+
+/* Redimensionamiento del área de texto */
+.form-section textarea {
+    width: 100%;
+    height: 80px;
+}
+
+.form-section-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-section-horizontal label {
+    width: 30%;
+}
+
+.form-section-horizontal input {
+    width: 65%;
+}
+
+/* Estilo adicional para el botón */
+.form-section button[type="submit"] {
+    background-color: #3459E6;
+    color: #fff;
+    cursor: pointer;
+    width: 28%; /* Cambiado el ancho al 100% para que sea responsivo */
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    display: block;
+    /* Cambia el botón a un elemento de bloque */
+    margin: 0 auto;
+    /* Establece los márgenes automáticos para centrar horizontalmente */
+
+    /* Tamaño del texto responsivo */
+    font-size: 16px; /* Ajusta el tamaño del texto según tus necesidades */
+}
+
+/* Ajustes adicionales para mejorar la responsividad del formulario */
+@media screen and (max-width: 600px) {
+    form {
+        width: 80%;
+    }
+
+    .form-section button[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* Estilos para la barra lateral */
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar {
+    width: 20%; /* Ancho de la barra lateral */
+    background-color: #3459E6;
+    color: #fff;
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+@media screen and (max-width: 600px) {
+
+    form {
+        width: 80%;
+    }
+
+    .form-section button[type="submit"] {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* input:focus {
+    background-color: #ffeeaa;
+    outline: 2px solid #3459E6;
+} */
